@@ -15,8 +15,6 @@ public class MainController {
     private Stage stage;
 
     @FXML
-    private Label welcomeText;
-
     public void setStage(Stage stage) {
         this.stage = stage;
     }
@@ -30,7 +28,7 @@ public class MainController {
         ArrayList<Student> students = csvFileLoader.getStudents();
         //  AQUI SE METE EN LA TABLA LOS ESTUDIANTES
         for (int i = 0; i < students.size(); i++) {
-            System.out.println(students.get(i).getFirstName() + " " + students.get(i).getLastName()+ " " + students.get(i).getAge());
+            System.out.println(students.get(i).getCarne() + " " + students.get(i).getNombreApellido()+ " " + students.get(i).getCorreo()+ " " + students.get(i).getTelefono()+ " " +students.get(i).getNickname()+ " " +students.get(i).getTipoEstudiante()+ " " +students.get(i).getNotaExamenes()+ " " +students.get(i).getNotaQuices()+ " " +students.get(i).getNotaTareas()+ " " +students.get(i).getNotaProyecto1()+ " " +students.get(i).getNotaProyecto2()+ " " +students.get(i).getNotaProyecto3());
         }
     }
 }

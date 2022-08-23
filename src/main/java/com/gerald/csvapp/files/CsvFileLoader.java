@@ -31,8 +31,15 @@ public class CsvFileLoader {
             ArrayList<Student> students = new ArrayList<Student>();
             for (int i = 1; i < fileLines.size(); i++) {
                 String[] studentAttributes = fileLines.get(i).split(";");
-                Student newStudent = new Student(studentAttributes[0],
-                                                    studentAttributes[1], Integer.parseInt(studentAttributes[2]));
+                int Carne= Integer.parseInt(studentAttributes[0]);
+                int Telefono= Integer.parseInt(studentAttributes[3]);
+                int NotaExamenes= Integer.parseInt(studentAttributes[6]);
+                int NotaQuices= Integer.parseInt(studentAttributes[7]);
+                int NotaTareas= Integer.parseInt(studentAttributes[8]);
+                int NotaProyecto1= Integer.parseInt(studentAttributes[9]);
+                int NotaProyecto2= Integer.parseInt(studentAttributes[10]);
+                int NotaProyecto3= Integer.parseInt(studentAttributes[11]);
+                Student newStudent = new Student(Carne, studentAttributes[1], studentAttributes[2], Telefono, studentAttributes[4], studentAttributes[5], NotaExamenes,NotaQuices, NotaTareas, NotaProyecto1, NotaProyecto2, NotaProyecto3);
                 students.add(newStudent);
             }
             return students;
